@@ -37,7 +37,7 @@ def get_wfs(filename, url, output_dir='boundaries', cache_dir='.tmp'):
 def main():
 
     boundaries = [
-        ('local_council.json', 'https://geo.spatialhub.scot/geoserver/sh_las/wfs?authkey=b85aa063-d598-4582-8e45-e7e6048718fc&request=GetFeature&service=WFS&version=1.1.0&outputFormat=application%2Fjson&typeName=pub_las'),
+        ('local_authorities.json', 'https://geo.spatialhub.scot/geoserver/sh_las/wfs?authkey=b85aa063-d598-4582-8e45-e7e6048718fc&request=GetFeature&service=WFS&version=1.1.0&outputFormat=application%2Fjson&typeName=pub_las'),
         ('fire_rescue.json', 'https://maps.gov.scot/server/services/ScotGov/CrimeJusticeSafety/MapServer/WFSServer?typename=CJS:ScottishFireRescue&request=GetFeature&service=WFS&version=1.1.0'),
         #('police.json', 'https://maps.gov.scot/server/services/ScotGov/CrimeJusticeSafety/MapServer/WFSServer?typename=CJS:ScottishPoliceDivisions&request=GetFeature&service=WFS&version=1.1.0'),
         ('health_integration_authorities.json', 'https://maps.gov.scot/server/services/ScotGov/HealthSocialCare/MapServer/WFSServer?request=GetFeature&service=WFS&version=1.1.0&outputFormat=GML3&typeName=HSC:HealthIntegrationAuthorities'),
