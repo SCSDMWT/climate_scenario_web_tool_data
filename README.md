@@ -3,7 +3,17 @@
 A git LFS repository to hold large data files for the 
 [Climate Impact Web Tool](https://github.com/SCSDMWT/climate_scenario_web_tool).
 
-## Data Provinance
+## Data Provenance
+
+### Pre-computed hazard data
+
+The [Climate Impact Web Tool](https://github.com/SCSDMWT/climate_scenario_web_tool) CLI is
+used to generate the content of [sql/extreme_temp.sql](sql/extreme_temp.sql):
+```bash
+git clone https://github.com/SCSDMWT/climate_scenario_web_tool
+cd climate_scenario_web_tool
+uv run  -- flask --app scotclimpact db-pre-compute > ../sql/extreme_temp.sql
+```
 
 ### Data layers
 
