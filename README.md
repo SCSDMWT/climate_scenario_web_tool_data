@@ -35,7 +35,7 @@ uv run bin/get_boundaries.py
 
 Generate the Pooch registry entries for client projects:
 ```console
-md5sum boundaries/*.json | sed -r "s/([a-z0-9]+)\\ \\ (.*)/'\\2': 'md5:\\1',/"
+git lfs ls-files | cut -f 3 -d ' ' | xargs -n 1 md5sum | sed -r "s/([a-z0-9]+)\\ \\ (.*)/'\\2': 'md5:\\1',/"
 ```
 
 
